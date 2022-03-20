@@ -13,6 +13,11 @@ final class WasmInterpreterTests: XCTestCase {
             XCTAssertEqual("function lookup failed", msg)
         }
     }
+    
+    func testMainModule() throws {
+        let mod = try CustomModule(base64: "AGFzbQEAAAABBwFgAn9/AX8DAgEABwcBA2FkZAAACgkBBwAgACABags=")
+        XCTAssertEqual(0, try mod.main(args: ["1", "2"]));
+    }
 
     func testPassingAndReturning32BitValues() throws {
         let mod = try AddModule()

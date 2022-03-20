@@ -8,6 +8,10 @@ extension WasmInterpreter {
     public func call<Ret>(_ name: String) throws -> Ret where Ret: WasmTypeProtocol {
         return try _call(try function(named: name), args: [])
     }
+    
+    public func call<Ret>(_ name: String, _ args: [String]) throws -> Ret where Ret: WasmTypeProtocol {
+        return try _call(try function(named: name), args: args)
+    }
 
     public func call<Arg1>(_ name: String, _ arg1: Arg1) throws where Arg1: WasmTypeProtocol {
         try _call(try function(named: name), args: [try String(wasmType: arg1)])
