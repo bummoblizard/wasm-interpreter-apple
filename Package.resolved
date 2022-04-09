@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "CWasm3",
+        "repositoryURL": "https://github.com/bummoblizard/cwasm3",
+        "state": {
+          "branch": null,
+          "revision": "9019615404ebc30bda41ba263a16d50d64fb3e9f",
+          "version": "0.5.3"
+        }
+      },
+      {
         "package": "Synchronized",
         "repositoryURL": "https://github.com/shareup/synchronized.git",
         "state": {
